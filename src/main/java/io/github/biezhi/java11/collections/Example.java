@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import static java.util.Map.entry;
+
+
 /**
  * 这个例子中感受一些新版本改(chao)进(xi)的集合 API。
  *
@@ -25,6 +28,18 @@ public class Example {
 
         // 快速创建一个 Map
         var mmp = Map.of(2017, "先赚他一个亿", 2018, "去年的梦想可能有点儿夸张");
+
+        // 使用 Entries 创建一个 Map
+        Map<Integer, String> emptyEntryMap = Map.ofEntries(
+                entry(20, "装逼"),
+                entry(30, "单身"),
+                entry(40, "回家种地")
+        );
+
+        // 创建一个 Map.Entry
+        Map.Entry<String, String> immutableMapEntry = Map.entry("biezhi", "emmmm");
+        // 其实和上面的代码片段是一样一样的
+        Map.ofEntries(immutableMapEntry);
 
         // 创建一个空 Set<String>
         Set<String> immutableSet = Set.of();
