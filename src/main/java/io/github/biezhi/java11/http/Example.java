@@ -106,7 +106,7 @@ public class Example {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("http://localhost:8080/upload/"))
-                .POST(HttpRequest.BodyPublishers.ofFile(Paths.get("/tmp/file-to-upload.txt")))
+                .POST(HttpRequest.BodyPublishers.ofFile(Paths.get("/tmp/files-to-upload.txt")))
                 .build();
 
         HttpResponse<Void> response = client.send(request, HttpResponse.BodyHandlers.discarding());
