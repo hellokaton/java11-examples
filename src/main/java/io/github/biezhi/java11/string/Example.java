@@ -1,5 +1,7 @@
 package io.github.biezhi.java11.string;
 
+import java.util.stream.Collectors;
+
 /**
  * String.repeat(int)
  * String.lines()
@@ -90,13 +92,23 @@ public class Example {
         System.out.println("空格       -> " + spacesOnly.isBlank());
     }
 
+
+    public static void lines() {
+        writeHeader("String.lines()");
+
+        String str = "Hello \n World, I,m\nbiezhi.";
+
+        System.out.println(str.lines().collect(Collectors.toList()));
+    }
+
     public static void main(String[] args) {
 //        writeHeader("User-Agent\tMozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5)");
 //        demonstrateStringLines();
 //        demonstrateStringStrip();
 //        demonstrateStringStripLeading();
 //        demonstrateStringStripTrailing();
-        demonstrateStringIsBlank();
+//        demonstrateStringIsBlank();
+        lines();
     }
 
 }
