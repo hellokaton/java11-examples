@@ -1,5 +1,7 @@
 package io.github.biezhi.java11.var;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -27,8 +29,14 @@ public class Example {
 
         System.out.println("字节数组: " + bytes);
 
-        for (var b: bytes) {
+        for (var b : bytes) {
             // TODO
+        }
+
+        try (var foo = new FileInputStream(new File(""))) {
+            System.out.println(foo);
+        } catch (Exception e) {
+            // ignore
         }
 
     }
