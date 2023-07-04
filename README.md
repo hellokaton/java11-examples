@@ -12,6 +12,7 @@ This repository contains some new feature code after Java8, which runs on top of
 - [files](src/main/java/io/github/biezhi/java11/files)
 - [time](src/main/java/io/github/biezhi/java11/time)
 - [single file](src/main/java/io/github/biezhi/java11/singlefile)
+- [git demo] added to validate git clone
 
 # License
 
